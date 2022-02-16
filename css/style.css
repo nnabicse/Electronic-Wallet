@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* import google fonts end */
 
+/* *{
+    border: 1px solid red;
+} */
+
 body{
     font-family: 'Poppins', sans-serif;
+
+}
+
+/* img{
+    height: 815px;
+    width: 705px;
+} */
+
+
+.image{
+    background-color: #FED273;
 }
