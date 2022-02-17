@@ -106,6 +106,8 @@ document.getElementById("saving").addEventListener("click", function(){
     }
     //if saving is greater than the balance then there will be an error
     else{  
-           document.getElementById("saving-remaining-error").innerText  = "Error: Saving Can't Be Greater Than Balance"
+            document.getElementById("saving-remaining-error").innerText  = "Error: Saving Can't Be Greater Than Balance"
+            document.getElementById("remaining-amount").innerText  = "";
+            document.getElementById("total-saving").innerText  = "";
     }    
 });
