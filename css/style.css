@@ -2,18 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* import google fonts end */
 
-
+/* apply google font to body */
 body{
     font-family: 'Poppins', sans-serif;
 
 }
 
-/* img{
-    height: 815px;
-    width: 705px;
-} */
-
+/* adjust image background the image */
 
 .image{
     background-color: #FED273;
+}
+
+
+/* Hiding increase/decrease arrow - chrome,edge,safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Hiding increase/decrease arrow - Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
