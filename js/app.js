@@ -7,7 +7,7 @@ function getInput(id){
     //check if input is given or not
     if((inputField.value).length == 0){
         //if any of the input field is empty then there willbe input is empty error
-        document.getElementById(id + "-error").innerText = "Input is Empty";
+        document.getElementById(id + "-error").innerText = "Input Must Be a Number";
         //if there is any empty input then there will be no result in the outputs
         document.getElementById("total-expenses").innerText  ="";
         document.getElementById("balance").innerText  = "";
@@ -29,13 +29,14 @@ function getInput(id){
         if(inputAmount>=0){
             /*if all inputs are given and the inputs are greater than 0 and there is no negetive numbers then there will be no errors*/
             document.getElementById(id + "-error").innerText = "";
-            document.getElementById("saving-remaining-error").style.display  = "none"
             return inputAmount;
             
-
         }
         else{
             /*If there is any negetive inputs then there will be an error*/
+            document.getElementById("saving-remaining-error").style.display = "none"; 
+            document.getElementById("remaining-amount").innerText  = "";
+            document.getElementById("total-saving").innerText  = "";
             document.getElementById(id + "-error").innerText = "Negetive Number Not Accepted";
             return;
         }
@@ -108,9 +109,10 @@ document.getElementById("saving").addEventListener("click", function(){
         document.getElementById("saving-remaining-error").innerText  = "";
     }
     //if saving is greater than the balance then there will be an error
-    else{  
-            document.getElementById("saving-remaining-error").innerText  = "Error: Saving Can't Be Greater Than Balance"
-            document.getElementById("remaining-amount").innerText  = "";
-            document.getElementById("total-saving").innerText  = "";
+    else if(saving>balance){
+        document.getElementById("saving-remaining-error").style.display = "block";
+        document.getElementById("saving-remaining-error").innerText  = "Error: Saving Can't Be Greater Than Balance" 
+        document.getElementById("remaining-amount").innerText  = "";
+        document.getElementById("total-saving").innerText  = "";
     }    
 });
