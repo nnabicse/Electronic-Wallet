@@ -29,7 +29,10 @@ function getInput(id){
         if(inputAmount>=0){
             /*if all inputs are given and the inputs are greater than 0 and there is no negetive numbers then there will be no errors*/
             document.getElementById(id + "-error").innerText = "";
+            document.getElementById("saving-remaining-error").style.display  = "none"
             return inputAmount;
+            
+
         }
         else{
             /*If there is any negetive inputs then there will be an error*/
